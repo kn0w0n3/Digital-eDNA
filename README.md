@@ -21,3 +21,4 @@ VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
 # **Resources:**  
 https://www.ednacollab.org/  
 https://ednaresources.science/field-methods  
+https://pubs.usgs.gov/tm/02/a13/tm2a13.pdf  
