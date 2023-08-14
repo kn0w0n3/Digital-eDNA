@@ -1,7 +1,7 @@
 # Digital eDNA    
 An environmental DNA (eDNA) data collection tool  
 
-![digital-edna-gui-android2-8-13-23](https://github.com/kn0w0n3/Digital-eDNA/assets/22214754/6122f6ce-97df-4080-8c78-9543c55b2ecb)  
+![digital-edna-gui-8-13-23](https://github.com/kn0w0n3/Digital-eDNA/assets/22214754/ec398978-3499-4fce-8105-7f9ab9611ca0)  
 
 # **Usage:**    
 * Store specimen and other collection site data for further processing at a later time  
