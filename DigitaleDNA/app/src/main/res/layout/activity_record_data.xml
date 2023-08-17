@@ -1,20 +1,603 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recordDataScrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RecordData"
-    android:background="@drawable/bg">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg5"
+    android:fillViewport="true"
+    tools:ignore="NamespaceTypo"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="283dp"
-        android:layout_height="34dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
-        app:srcCompat="@drawable/inputdatatext" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="100dp"
+        tools:context=".RecordData"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="6dp">
+
+        <TextView
+            android:id="@+id/numOfSampleLbl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Notes:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/numOfSampleLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/numOfSampleLbl"
+            app:layout_constraintTop_toBottomOf="@+id/numOfSampleLbl" />
+
+        <EditText
+            android:id="@+id/numOfSamplesEditTxt"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName17"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName17"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+
+        <EditText
+            android:id="@+id/numOfSamplesEditTxt2"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/numOfSamplesEditTxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/numOfSamplesEditTxt"
+            app:layout_constraintTop_toBottomOf="@+id/numOfSamplesEditTxt" />
+
+        <TextView
+            android:id="@+id/numOfSampleLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Number of Samples:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/collectorsLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/collectorsLbl"
+            app:layout_constraintTop_toBottomOf="@+id/collectorsLbl" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName16"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName15"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName15"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName17"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName16"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName16"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName15"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName14"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName14"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName14"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName13"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName12"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName12"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName11"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName11"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName11"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName10"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName10"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName9"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName8"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName10"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName9"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName8"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName7"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName6"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/countryEditTxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/countryEditTxt"
+            app:layout_constraintTop_toBottomOf="@+id/countryEditTxt" />
+
+        <EditText
+            android:id="@+id/dateEditTxt"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/sampleIdEditTxt"
+            app:layout_constraintStart_toStartOf="@+id/sampleIdEditTxt"
+            app:layout_constraintTop_toBottomOf="@+id/sampleIdEditTxt" />
+
+        <EditText
+            android:id="@+id/protocolEditTxt"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/dateEditTxt"
+            app:layout_constraintStart_toStartOf="@+id/dateEditTxt"
+            app:layout_constraintTop_toBottomOf="@+id/dateEditTxt" />
+
+        <EditText
+            android:id="@+id/countryEditTxt"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/protocolEditTxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/protocolEditTxt"
+            app:layout_constraintTop_toBottomOf="@+id/protocolEditTxt" />
+
+        <TextView
+            android:id="@+id/depthAccuracyLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Depth Accuracy:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/depthLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/depthLbl"
+            app:layout_constraintTop_toBottomOf="@+id/depthLbl" />
+
+        <TextView
+            android:id="@+id/depthLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Depth:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/elevationLbl2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/elevationLbl2"
+            app:layout_constraintTop_toBottomOf="@+id/elevationLbl2" />
+
+        <TextView
+            android:id="@+id/elevationLbl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Elevation Accuracy:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/elevationLbl"
+            app:layout_constraintHorizontal_bias="0.962"
+            app:layout_constraintStart_toStartOf="@+id/elevationLbl"
+            app:layout_constraintTop_toBottomOf="@+id/elevationLbl" />
+
+        <TextView
+            android:id="@+id/elevationLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Elevation:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/coordAccuracyLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/coordAccuracyLbl"
+            app:layout_constraintTop_toBottomOf="@+id/coordAccuracyLbl" />
+
+        <TextView
+            android:id="@+id/collectorsLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Collectors:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/depthAccuracyLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/depthAccuracyLbl"
+            app:layout_constraintTop_toBottomOf="@+id/depthAccuracyLbl" />
+
+        <TextView
+            android:id="@+id/coordAccuracyLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Coord Accuracy:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/coordSourceLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/coordSourceLbl"
+            app:layout_constraintTop_toBottomOf="@+id/coordSourceLbl" />
+
+        <TextView
+            android:id="@+id/coordSourceLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Coord Source:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/longitudeLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/longitudeLbl"
+            app:layout_constraintTop_toBottomOf="@+id/longitudeLbl" />
+
+        <TextView
+            android:id="@+id/longitudeLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Longitude:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/lattitudeLbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/lattitudeLbl"
+            app:layout_constraintTop_toBottomOf="@+id/lattitudeLbl" />
+
+        <TextView
+            android:id="@+id/lattitudeLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Lattitude:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/exactSiteLbl"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="@+id/exactSiteLbl"
+            app:layout_constraintTop_toBottomOf="@+id/exactSiteLbl" />
+
+        <TextView
+            android:id="@+id/exactSiteLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Exact Site:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/sectorlbl"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/sectorlbl"
+            app:layout_constraintTop_toBottomOf="@+id/sectorlbl" />
+
+        <TextView
+            android:id="@+id/sectorlbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Sector:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/protocolLabel4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/protocolLabel4"
+            app:layout_constraintTop_toBottomOf="@+id/protocolLabel4" />
+
+        <TextView
+            android:id="@+id/protocolLabel4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Region/County:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/protocolLabel3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/protocolLabel3"
+            app:layout_constraintTop_toBottomOf="@+id/protocolLabel3" />
+
+        <TextView
+            android:id="@+id/protocolLabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="State/Province:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/countryLbl"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="@+id/countryLbl"
+            app:layout_constraintTop_toBottomOf="@+id/countryLbl" />
+
+        <TextView
+            android:id="@+id/countryLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Country:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/protocolLabel"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/protocolLabel"
+            app:layout_constraintTop_toBottomOf="@+id/protocolLabel" />
+
+        <TextView
+            android:id="@+id/protocolLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Protocol:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/DateLabel"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/DateLabel"
+            app:layout_constraintTop_toBottomOf="@+id/DateLabel" />
+
+        <TextView
+            android:id="@+id/DateLabel"
+            android:layout_width="28dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="18dp"
+            android:text="Date:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/sampleIdLabel"
+            app:layout_constraintHorizontal_bias="0.966"
+            app:layout_constraintStart_toStartOf="@+id/sampleIdLabel"
+            app:layout_constraintTop_toBottomOf="@+id/sampleIdLabel" />
+
+        <TextView
+            android:id="@+id/sampleIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="Sample ID:"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/collectionDetailsLabel"
+            app:layout_constraintHorizontal_bias="0.655"
+            app:layout_constraintStart_toStartOf="@+id/collectionDetailsLabel"
+            app:layout_constraintTop_toBottomOf="@+id/collectionDetailsLabel" />
+
+        <TextView
+            android:id="@+id/collectionDetailsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Collection Details:"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/inputdatatext" />
+
+        <EditText
+            android:id="@+id/sampleIdEditTxt"
+            android:layout_width="229dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="39dp"
+            android:backgroundTint="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="63dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/numOfSampleLbl2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/numOfSampleLbl2"
+            app:layout_constraintTop_toBottomOf="@+id/numOfSampleLbl2"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/imgPathTxt"
+            android:layout_width="228dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/box_border"
+            android:foregroundGravity="clip_vertical"
+            android:paddingTop="6.5sp"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/numOfSamplesEditTxt2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/numOfSamplesEditTxt2"
+            app:layout_constraintTop_toBottomOf="@+id/numOfSamplesEditTxt2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
